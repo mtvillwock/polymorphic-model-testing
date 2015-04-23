@@ -7,10 +7,13 @@ Creates a Profile and Location when a User is created. Both should be associated
 Creates a Profile and Location when a Startup is created. Both should be associated with the Startup.
 
 Both Users and Startups should have destroy dependent functionality in their models.
-Users have 1 Profile and 1 Location.
-Startups have 1 Profile and 1 Location.
-Locations can belong to a Startup or a User.
-Profiles can belong to a Startup or a User.
+- Users have 1 Startup.
+- Users have 1 Profile and 1 Location.
+- Startups have many Users.
+- Startups have 1 Profile and 1 Location.
+- Locations can belong to a Startup or a User.
+- Profiles can belong to a Startup or a User.
+
 Based on the description, it seems that there will be multiple Location objects for different Users/Startups (it's not Highlander). Doing so otherwise would be problematic with destroy dependent functionality.
 
 Will need to investigate polymorphic (or other kinds?) of associations for Locations and Profiles (or figure out some way to differentiate between which Portfolios and Locations are for Users and which are for Startups.)
