@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 20150424001639) do
   enable_extension "plpgsql"
 
   create_table "locations", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "startup_id"
     t.string   "city"
     t.string   "address"
     t.datetime "created_at", null: false
@@ -26,12 +24,14 @@ ActiveRecord::Schema.define(version: 20150424001639) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "startup_id"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "description"
+    t.integer  "profileable_id"
+    t.string   "profileable_type"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
+
+  add_index "profiles", ["profileable_id", "profileable_type"], name: "index_profiles_on_profileable_id_and_profileable_type", using: :btree
 
   create_table "startups", force: :cascade do |t|
     t.string   "name"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20150424001639) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer  "startup_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

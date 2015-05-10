@@ -1,4 +1,3 @@
 class Profile < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :startup
+  belongs_to :profileable, polymorphic: true
 end
