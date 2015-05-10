@@ -1,4 +1,3 @@
-require 'faker'
 FactoryGirl.define do
   factory :startup do
     factory :valid_startup do

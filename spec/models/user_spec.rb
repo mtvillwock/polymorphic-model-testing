@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'faker'
 
 RSpec.describe User, type: :model do
   context 'model validations and associations' do
@@ -20,12 +21,10 @@ RSpec.describe User, type: :model do
 
   context 'invalid User' do
     it 'is invalid without a name' do
-      user_without_name = build(:user_without_name)
-      expect(user_without_name).to be_invalid
+      expect(build(:user_without_name)).to be_invalid
     end
     it 'is invalid without a startup' do
-      user_without_startup = build(:user_without_startup)
-      expect(user_without_startup).to be_invalid
+      expect(build(:user_without_startup)).to be_invalid
     end
   end
 end
