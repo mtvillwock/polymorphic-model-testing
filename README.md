@@ -1,5 +1,7 @@
 # Polymorphic Model Testing
+
 ## Initial thoughts:
+
 This project is meant to be a simple CRUD app that does the following:
 
 Creates a Profile and Location when a User is created. Both should be associated with the User.
