@@ -14,9 +14,6 @@ Both Users and Startups should have destroy dependent functionality in their mod
 - Locations can belong to a Startup or a User.
 - Profiles can belong to a Startup or a User.
 
-Based on the description, it seems that there will be multiple Location objects for different Users/Startups (it's not Highlander). Doing so otherwise would be problematic with destroy dependent functionality.
-
-Will need to investigate polymorphic (or other kinds?) of associations for Locations and Profiles (or figure out some way to differentiate between which Portfolios and Locations are for Users and which are for Startups.)
 
 ## Requirements
 
@@ -24,9 +21,12 @@ Will need to investigate polymorphic (or other kinds?) of associations for Locat
 - Simple forms for creation of Users and Startups
 - Attributes for migration tables are open-ended
 
-Stretch goals:
-Use Crunchbase API to grab supply auto-complete data for Startups?
-OAuth login for Users
+## Implementation Decisions
+
+I decided to utilize polymorphic associations in order to allow Users and Startups to have Locations and Profiles without clogging the database with empty foreign keys from whichever class was not being associated with the Location or Profile.
+
+I used ```destroy: :dependent``` to ensure that Profiles and Locations associated with Users or Startups that were being deleted would also be deleted from the database.
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
