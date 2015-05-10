@@ -1,4 +1,4 @@
-== README
+# Polymorphic Model Testing
 ## Initial thoughts:
 This project is meant to be a simple CRUD app that does the following:
 
