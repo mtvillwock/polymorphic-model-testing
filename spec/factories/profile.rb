@@ -7,7 +7,6 @@ FactoryGirl.define do
       end
       factory :startup_profile do
         description Faker::Lorem.sentence
-
         startup
       end
     end
