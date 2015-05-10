@@ -27,6 +27,8 @@ I decided to utilize polymorphic associations in order to allow Users and Startu
 
 I used ```destroy: :dependent``` to ensure that Profiles and Locations associated with Users or Startups that were being deleted would also be deleted from the database.
 
+For the time being I have decided to implement the creation of associated objects in the controller instead of by using a before save callback. I may revisit this decision later.
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

@@ -3,13 +3,17 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   context 'model validations and associations' do
     it { should validate_presence_of :name }
+    it { should validate_uniqueness_of :name }
     it { should validate_presence_of :startup_id }
     it { should belong_to :startup }
+    it { should have_one :profile }
+    it { should have_one :location }
   end
+
   context 'valid User' do
     it 'is valid with a name and startup id' do
       startup = create(:valid_startup)
-      user = build(:valid_user)
+      user = build(:user, name: Faker::Name.name, startup_id: startup.id)
       expect(user).to be_valid
     end
   end
