@@ -33,3 +33,5 @@ For the time being I have decided to implement the creation of associated object
 For reference, something like the Factory_Girl callback shown here:http://stackoverflow.com/questions/7747945/factorygirl-and-polymorphic-associations
 
 I also might want to test have_db_column and have_db_index later.
+
+I decided not to use form_for due to it not playing well with multiple objects. However, I recognize that using nested attributes and forms would be preferable for a production app, instead of a sandbox one like this.
