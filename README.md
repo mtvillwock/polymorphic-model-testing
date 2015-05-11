@@ -9,7 +9,7 @@ Creates a Profile and Location when a User is created. Both should be associated
 Creates a Profile and Location when a Startup is created. Both should be associated with the Startup.
 
 Both Users and Startups should have destroy dependent functionality in their models for their respective Profiles and Locations.
-- Users has 1 Startup.
+- Users have 1 Startup.
 - Users have 1 Profile and 1 Location.
 - Startups have many Users.
 - Startups have 1 Profile and 1 Location.
