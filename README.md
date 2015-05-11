@@ -33,31 +33,3 @@ For the time being I have decided to implement the creation of associated object
 For reference, something like the Factory_Girl callback shown here:http://stackoverflow.com/questions/7747945/factorygirl-and-polymorphic-associations
 
 I also might want to test have_db_column and have_db_index later.
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
