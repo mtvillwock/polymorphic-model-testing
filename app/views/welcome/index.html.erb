@@ -6,8 +6,8 @@
   </div>
   <div class="startups">
   <% if !@startups.empty? %>
-  <% @startups.each do |startup| %>
   <h3>Startups</h3>
+  <% @startups.each do |startup| %>
   <ul>
     <li><%= startup.name %> in <%= startup.location.city %>
       <p>
@@ -20,8 +20,8 @@
   </div>
   <div class="users">
   <% if !@users.empty? %>
-  <% @users.each do |user| %>
   <h3>Users</h3>
+  <% @users.each do |user| %>
   <ul>
     <li><%= user.name %> in <%= user.location.city %>
       <p>
