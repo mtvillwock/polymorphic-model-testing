@@ -1,0 +1,30 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+.row:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+
+input {
+  display: block;
+  margin: 15px 0;
+}
+
+.startup-form {
+  float: right;
+  margin: auto;
+}
+
+.user-form {
+  float: left;
+  margin: auto;
+}

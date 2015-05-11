@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Propel(x)</h1>
+  <div class="row">
+  <%= render 'startup_form' %>
+  <%= render 'user_form' %>
+  </div>
+  <div class="startups">
+  <% if !@startups.empty? %>
+  <h3>Startups</h3>
+  <% @startups.each do |startup| %>
+  <ul>
+    <li><%= startup.name %> in <%= startup.location.city %>
+      <p>
+        <%= startup.profile.description %>
+      </p>
+    </li>
+  </ul>
+  <% end %>
+  <% end %>
+  </div>
+  <div class="users">
+  <% if !@users.empty? %>
+  <h3>Users</h3>
+  <% @users.each do |user| %>
+  <ul>
+    <li><%= user.name %> in <%= user.location.city %>
+      <p>
+        <%= user.profile.description %>
+      </p>
+    </li>
+  </ul>
+  <% end %>
+  <% end %>
+  </div>
+</div>

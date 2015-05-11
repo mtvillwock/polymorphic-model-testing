@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
@@ -34,7 +33,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'railties'
 
 group :test do
-  gem "faker"
   gem "capybara"
   gem "database_cleaner"
   gem "launchy"
@@ -43,6 +41,7 @@ end
 
 group :development, :test do
   # Use Rspec for testing
+  gem "faker"
   gem 'rspec-rails', '~> 3.0'
   gem "factory_girl_rails"
   gem 'shoulda-matchers'

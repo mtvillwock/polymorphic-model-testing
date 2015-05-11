@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20150510001116) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "city"
-    t.string   "address"
     t.integer  "locationable_id"
     t.string   "locationable_type"
     t.datetime "created_at",        null: false
