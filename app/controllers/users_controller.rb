@@ -10,7 +10,7 @@ class UsersController < ApplicationController
                                 locationable_id: @user.id,
                                 locationable_type: @user.class.name).save
     else
-      render :json { error: "startup failed to save"}
+      render json: { error: "startup failed to save"}
     end
     redirect_to '/'
   end
